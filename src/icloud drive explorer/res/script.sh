@@ -21,6 +21,18 @@ case "$1" in
         numbers)
             open "$HOME/Library/Mobile Documents/com~apple~Numbers/Documents"
             ;;
+        pdfexpert)
+            open "$HOME/Library/Mobile Documents/3L68KQB4HG~com~readdle~CommonDocuments/Documents"
+            ;;
+        iawriter)
+            open "$HOME/Library/Mobile Documents/27N4MQEA55~pro~writer/Documents"
+            ;;
+        sketch)
+            open "$HOME/Library/Mobile Documents/WUGMZZ5K46~com~bohemiancoding~sketch/Documents"
+            ;;
+        officesuite)
+            open "$HOME/Library/Mobile Documents/M28Q9HQMUK~com~mobisystems~OfficeSuite/Documents"
+            ;;
         *)
             open "$HOME/Library/Mobile Documents/com~apple~CloudDocs"
             exit 0

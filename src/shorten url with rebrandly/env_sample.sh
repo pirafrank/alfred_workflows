@@ -1,0 +1,2 @@
+export REBRANDLY_API_TOKEN="supersecrettokenhere"
+export REBRANDLY_FAV_DOMAIN_ID="anothersupersecrettokenhere"

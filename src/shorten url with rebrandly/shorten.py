@@ -3,6 +3,7 @@ import sys
 import urllib
 import json
 import requests
+import subprocess
 
 #
 # Sample data
@@ -21,6 +22,12 @@ post_uri = 'https://api.rebrandly.com/v1/links'
 
 default_error_title = "Rebrandly shortening: ERROR"
 default_error_msg = "Sorry, something went wrong."
+
+
+def write_to_clipboard(text):
+    process = subprocess.Popen(
+        'pbcopy', env={'LANG': 'en_US.UTF-8'}, stdin=subprocess.PIPE)
+    process.communicate(text.encode('utf-8'))
 
 def notify(title, msg):
     os.system("""
@@ -77,3 +84,4 @@ if len(url) > 1 and len(slashtag) > 1:
 short_url = shorten_url(post_uri, api_token, data)
 notify("Rebrandly shortening: Done", short_url)
 print(short_url)
+write_to_clipboard(short_url)
